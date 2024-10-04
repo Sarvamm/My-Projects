@@ -48,7 +48,7 @@ def isValid(x,base):
             return False
     return True
 
-#Any number into Decimal --------------------------------
+#Any number into Decimal 
 def a2d(x, base):
     x = str(x)
     base = int(base)  
@@ -91,4 +91,4 @@ def main(x, base1, base2):
     return inBase
 
 #Testing the program
-main("16aF2", 16, 36) #Number give, Base of number, Base to be converted to.
+main("16aF2", 16, 36) #Number given, Base of number, Base to be converted to.
