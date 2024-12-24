@@ -32,6 +32,7 @@ def C(n, r):
 
 def bino(x, y, n):
     if isinstance(x, str) and isinstance(y, str):
+        print("boing")
         for i in range(n+1):
             T = str(C(n, i)) + " . " + x + "^" + str(n-i) + " ." + y + "^" + str(i)
             if i < n:

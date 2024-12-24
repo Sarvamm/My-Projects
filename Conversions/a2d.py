@@ -1,10 +1,7 @@
-#A project by Sarvamm
-#A program that can convert any number of any base into another base.
-#constraints: 36 >= base >= 2
+#anybase to Decimal by Sarvamm
 
-
-#Checking whether given number actually belongs to the base
-#Creating a global variable l which will be used for calculations later
+#Checking a whether given number actually belongs to the base
+#Crating a global variable l which will be used for calculations later
 def checkbase(x , base):
     x = str(x)
     base = int(base)
@@ -48,7 +45,7 @@ def isValid(x,base):
             return False
     return True
 
-#Any number into Decimal --------------------------------
+#Main Function --------------------------------
 def a2d(x, base):
     x = str(x)
     base = int(base)  
@@ -62,33 +59,5 @@ def a2d(x, base):
                 r += int(i)*(base**hp)
                 hp -= 1
             return r
-#Decimal number into given base --------------------------------
-def d2a(x, base):
-
-    if 0 < int(base) <= 36:
-        l = []
-        divi = int(x)
-        oppo = int(base)
-        while divi != 0:
-            l.append(divi % oppo)
-            divi = divi // oppo
-        r = ""
-        for i in l[::-1]:
-            if i >= 10:
-                r += chr(i + 55)  # ASCII value of A=65, B=66 ...
-            else:
-                r += str(i)
-        return r
-    else:
-        print("invalid base")
-        return
-
-#main function --------------------------------
-def main(x, base1, base2):
-    inDecimal = a2d(x, base1)
-    inBase = d2a(inDecimal, base2)
-    print(f"The number {x} is equivalent to {inBase} in base {base2}.")
-    return inBase
-
-#Testing the program
-main("16aF2", 16, 36) #Number give, Base of number, Base to be converted to.
+    
+print(a2d("16AF2", 16)) #enter number and the base of the number

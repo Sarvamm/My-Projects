@@ -11,4 +11,3 @@ for i in range(1,n+1):
     else:
         j = 0
 print(pi)
-print(float(3))
